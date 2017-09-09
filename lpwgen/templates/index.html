@@ -1,0 +1,27 @@
+<html>
+  <head>
+    {% if title %}
+    <title>{{ title }} - Variable Banner</title>
+    {% else %}
+    <title>Variable Banner</title>
+    {% endif %}
+  </head>
+  <body>
+	<font face="Helvetica">
+    <div>Variable Banner: <a href="/">Home</a></div>
+    <hr>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul>
+        {% for message in messages %}
+			<font face="Courier New">
+            {{ message }} <br>
+			</font>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+	</font>
+  </body>
+</html>
