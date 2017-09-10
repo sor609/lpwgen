@@ -1,0 +1,17 @@
+{
+    "dev": {
+		"app_function": "banner.app", 
+        "aws_region": "us-east-1", 
+        "profile_name": "default", 
+        "s3_bucket": "zappa-s3-1",
+		"memory_size": 128
+    }
+	"prod": {
+		"app_function": "banner.app", 
+        "aws_region": "us-east-1", 
+        "profile_name": "default", 
+        "s3_bucket": "zappa-s3-1",
+		"memory_size": 128
+    }
+
+}
